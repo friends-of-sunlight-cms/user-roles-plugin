@@ -1,0 +1,31 @@
+{
+  "$schema": "../../../system/schema/extend.json",
+  "name": "User Roles",
+  "description": "Improved management of user privileges, granting of different roles.",
+  "version": "0.9.0",
+  "environment": {
+    "system": "^8.0"
+  },
+  "dependencies": {
+    "fosc-lib": ">=0.9.0",
+    "adminbread": ">=0.9.0"
+  },
+  "url": "https://jdanek.eu",
+  "class": "UserRolesPlugin",
+  "installer": "installer.php",
+  "langs": {
+    "userroles": "lang"
+  },
+  "events": [
+    {"event": "user.auth.success", "method": "onUserAuthSuccess"},
+    {"event": "user.delete.after", "method": "onUserDeleteAfter"},
+    {"event": "cron.init", "method": "cronInit"}
+  ],
+  "events.web": [],
+  "events.admin": [
+    {"event": "admin.init", "method": "onRegUsersSubmodule"},
+    {"event": "user.privileges", "method": "onRegPrivileges"},
+    {"event": "admin.editgroup.rights", "method": "onAdminEditGroupRights"},
+    {"event": "admin.users.groups.after", "method": "onUsersGroupsAfter"}
+  ]
+}
