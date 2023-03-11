@@ -10,7 +10,8 @@
     "fosc-lib": ">=0.9.0",
     "adminbread": ">=0.9.0"
   },
-  "url": "https://jdanek.eu",
+  "url": "https://github.com/friends-of-sunlight-cms/",
+  "author": "Friends of Sunlight CMS",
   "class": "UserRolesPlugin",
   "installer": "installer.php",
   "langs": {
