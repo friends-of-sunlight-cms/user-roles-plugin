@@ -124,13 +124,11 @@ class UserRolesPlugin extends ExtendPlugin
         ];
     }
 
-    public function getAction(string $name): ?PluginAction
-    {
-        if ($name === 'config') {
-            return new ConfigAction($this);
-        }
-        return parent::getAction($name);
-    }
+    /**
+     * ============================================================================
+     *  EXTEND CONFIGURATION
+     * ============================================================================
+     */
 
     protected function getConfigDefaults(): array
     {
@@ -142,4 +140,11 @@ class UserRolesPlugin extends ExtendPlugin
         ];
     }
 
+    public function getAction(string $name): ?PluginAction
+    {
+        if ($name === 'config') {
+            return new ConfigAction($this);
+        }
+        return parent::getAction($name);
+    }
 }
