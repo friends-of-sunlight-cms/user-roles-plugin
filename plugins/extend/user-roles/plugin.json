@@ -13,7 +13,7 @@
   "url": "https://github.com/friends-of-sunlight-cms/",
   "author": "Friends of Sunlight CMS",
   "class": "UserRolesPlugin",
-  "installer": "installer.php",
+  "installer": "resources/db/installer.php",
   "langs": {
     "userroles": "lang"
   },
