@@ -80,7 +80,7 @@ class UserRolesPlugin extends ExtendPlugin
         }
 
         $role_module = '<a class="button block" href="' . _e(Router::admin('users-roles')) . '">'
-            . '<img src="' . _e($this->getWebPath() . '/resources/images/roles.png') . '" alt="new" class="icon">' . _lang('userroles.users.manageroles')
+            . '<img src="' . _e($this->getWebPath() . '/public/images/roles.png') . '" alt="new" class="icon">' . _lang('userroles.users.manageroles')
             . "</a>\n";
 
         $args['output'] .= '<h2>' . _lang('userroles.users.roles') . '</h2>' . $role_module;
@@ -95,7 +95,7 @@ class UserRolesPlugin extends ExtendPlugin
             'title' => _lang('userroles.users.manageroles'),
             'access' => User::hasPrivilege('manageroles'),
             'parent' => 'users',
-            'script' => __DIR__ . DIRECTORY_SEPARATOR . 'admin/script.php',
+            'script' => __DIR__ . DIRECTORY_SEPARATOR . '../admin/script.php',
         ];
     }
 
