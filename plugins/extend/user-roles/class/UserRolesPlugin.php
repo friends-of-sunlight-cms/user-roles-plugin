@@ -123,28 +123,4 @@ class UserRolesPlugin extends ExtendPlugin
             ],
         ];
     }
-
-    /**
-     * ============================================================================
-     *  EXTEND CONFIGURATION
-     * ============================================================================
-     */
-
-    protected function getConfigDefaults(): array
-    {
-        return [
-            'move_since' => 0,
-            'move_until' => 30,
-            'auto_unlimited' => false,
-            'cron_interval' => 43200, // default: 43200 => 12h
-        ];
-    }
-
-    public function getAction(string $name): ?PluginAction
-    {
-        if ($name === 'config') {
-            return new ConfigAction($this);
-        }
-        return parent::getAction($name);
-    }
 }
