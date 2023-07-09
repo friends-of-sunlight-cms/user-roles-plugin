@@ -7,7 +7,7 @@
     "system": "^8.0"
   },
   "dependencies": {
-    "fosc-lib": ">=0.9.1",
+    "fosc-lib": ">=0.9.2",
     "adminbread": ">=0.9.1"
   },
   "authors": [

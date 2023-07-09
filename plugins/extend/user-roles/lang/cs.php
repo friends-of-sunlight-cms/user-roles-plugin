@@ -2,10 +2,10 @@
 
 return [
     // config
-    'cfg.move_since' => 'Začátek za <small>(dny)</small>',
-    'cfg.move_until' => 'Konec za <small>(dny)</small>',
-    'cfg.auto_unlimited' => 'Neomezená platnost rolí',
-    'cfg.cron_interval' => 'Čištění expirovaných rolí',
+    'config.move_since' => 'Začátek za <small>(dny)</small>',
+    'config.move_until' => 'Konec za <small>(dny)</small>',
+    'config.auto_unlimited' => 'Neomezená platnost rolí',
+    'config.cron_interval' => 'Čištění expirovaných rolí',
 
     // privileges
     'priv.manageroles.title' => 'Administrace - práva ve správě uživatelů',

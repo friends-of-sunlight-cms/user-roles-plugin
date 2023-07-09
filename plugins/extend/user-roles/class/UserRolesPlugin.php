@@ -3,7 +3,6 @@
 namespace SunlightExtend\UserRoles;
 
 use Sunlight\Database\Database as DB;
-use Sunlight\Plugin\Action\PluginAction;
 use Sunlight\Plugin\ExtendPlugin;
 use Sunlight\Router;
 use Sunlight\User;
@@ -80,7 +79,7 @@ class UserRolesPlugin extends ExtendPlugin
         }
 
         $role_module = '<a class="button block" href="' . _e(Router::admin('users-roles')) . '">'
-            . '<img src="' . _e($this->getWebPath() . '/public/images/roles.png') . '" alt="new" class="icon">' . _lang('userroles.users.manageroles')
+            . '<img src="' . _e($this->getAssetPath('public/images/roles.png')) . '" alt="new" class="icon">' . _lang('userroles.users.manageroles')
             . "</a>\n";
 
         $args['output'] .= '<h2>' . _lang('userroles.users.roles') . '</h2>' . $role_module;

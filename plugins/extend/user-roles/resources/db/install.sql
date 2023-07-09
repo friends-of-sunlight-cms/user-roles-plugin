@@ -12,6 +12,9 @@ CREATE TABLE `sunlight_user_role`
     KEY        `since` (`since`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-ALTER TABLE `sunlight_user_group` ADD `manageroles` TINYINT(1) NOT NULL DEFAULT '0';
+ALTER TABLE `sunlight_user_group`
+    ADD `manageroles` TINYINT(1) NOT NULL DEFAULT '0';
 
-UPDATE `sunlight_user_group` SET `manageroles` = '1' WHERE `sunlight_user_group`.`id` = 1;
+UPDATE `sunlight_user_group`
+SET `manageroles` = '1'
+WHERE `sunlight_user_group`.`id` = 1;

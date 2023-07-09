@@ -2,10 +2,10 @@
 
 return [
     // config
-    'cfg.move_since' => 'Start in <small>(days)</small>',
-    'cfg.move_until' => 'End in <small>(days)</small>',
-    'cfg.auto_unlimited' => 'Unlimited role validity',
-    'cfg.cron_interval' => 'Cleaning of expired roles',
+    'config.move_since' => 'Start in <small>(days)</small>',
+    'config.move_until' => 'End in <small>(days)</small>',
+    'config.auto_unlimited' => 'Unlimited role validity',
+    'config.cron_interval' => 'Cleaning of expired roles',
 
     // privileges
     'priv.manageroles.title' => 'Administration - rights in user management',

@@ -1,5 +1,7 @@
 <?php
+
 use Sunlight\Xsrf;
+
 ?>
 <form action="" method="post">
     <p><?= _lang('userroles.del.question') ?></p>

@@ -9,11 +9,13 @@ class ConfigAction extends BaseConfigAction
 {
     protected function getFields(): array
     {
-        $langPrefix = "%p:userroles.cfg";
+        $langPrefix = "%p:userroles.config";
 
         $gen = new FieldGenerator($this->plugin);
-        $gen->generateField('move_since', $langPrefix, '%number', ['class' => 'inputsmall', 'min' => 0])
-            ->generateField('move_until', $langPrefix, '%number', ['class' => 'inputsmall', 'min' => 0])
+        $gen->generateFields([
+            'move_since',
+            'move_until'
+        ], $langPrefix, '%number', ['class' => 'inputsmall', 'min' => 0])
             ->generateField('auto_unlimited', $langPrefix, '%checkbox')
             ->generateField('cron_interval', $langPrefix, '%select', [
                 'class' => 'inputsmall',
