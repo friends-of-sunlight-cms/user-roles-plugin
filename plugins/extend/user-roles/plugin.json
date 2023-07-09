@@ -1,42 +1,42 @@
 {
-  "$schema": "../../../system/schema/extend.json",
-  "name": "User Roles",
-  "description": "Improved management of user privileges, granting of different roles.",
-  "version": "0.9.2",
-  "environment": {
-    "system": "^8.0"
-  },
-  "dependencies": {
-    "fosc-lib": ">=0.9.2",
-    "adminbread": ">=0.9.1"
-  },
-  "authors": [
-    {"name": "Friends of Sunlight CMS", "url": "https://github.com/friends-of-sunlight-cms/"}
-  ],
-  "class": "UserRolesPlugin",
-  "config_defaults": {
-    "move_since": 0,
-    "move_until": 30,
-    "auto_unlimited": false,
-    "cron_interval": 43200
-  },
-  "actions": {
-    "config": "ConfigAction"
-  },
-  "installer": "resources/db/installer.php",
-  "langs": {
-    "userroles": "lang"
-  },
-  "events": [
-    {"event": "user.auth.success", "method": "onUserAuthSuccess"},
-    {"event": "user.delete.after", "method": "onUserDeleteAfter"},
-    {"event": "cron.init", "method": "cronInit"}
-  ],
-  "events.web": [],
-  "events.admin": [
-    {"event": "admin.init", "method": "onRegUsersSubmodule"},
-    {"event": "user.privileges", "method": "onRegPrivileges"},
-    {"event": "admin.editgroup.rights", "method": "onAdminEditGroupRights"},
-    {"event": "admin.users.groups.after", "method": "onUsersGroupsAfter"}
-  ]
+    "$schema": "../../../system/schema/extend.json",
+    "name": "User Roles",
+    "description": "Improved management of user privileges, granting of different roles.",
+    "version": "0.9.2",
+    "environment": {
+        "system": "^8.0"
+    },
+    "dependencies": {
+        "fosc-lib": ">=0.9.2",
+        "adminbread": ">=0.9.1"
+    },
+    "authors": [
+        {"name": "Friends of Sunlight CMS", "url": "https://github.com/friends-of-sunlight-cms/"}
+    ],
+    "class": "UserRolesPlugin",
+    "config_defaults": {
+        "move_since": 0,
+        "move_until": 30,
+        "auto_unlimited": false,
+        "cron_interval": 43200
+    },
+    "actions": {
+        "config": "ConfigAction"
+    },
+    "installer": "resources/db/installer.php",
+    "langs": {
+        "userroles": "lang"
+    },
+    "events": [
+        {"event": "user.auth.success", "method": "onUserAuthSuccess"},
+        {"event": "user.delete.after", "method": "onUserDeleteAfter"},
+        {"event": "cron.init", "method": "cronInit"}
+    ],
+    "events.web": [],
+    "events.admin": [
+        {"event": "admin.init", "method": "onRegUsersSubmodule"},
+        {"event": "user.privileges", "method": "onRegPrivileges"},
+        {"event": "admin.editgroup.rights", "method": "onAdminEditGroupRights"},
+        {"event": "admin.users.groups.after", "method": "onUsersGroupsAfter"}
+    ]
 }
