@@ -12,26 +12,26 @@ use Sunlight\Xsrf;
         <tr>
             <td><?= _lang('global.user') ?></td>
             <td><?= Admin::userSelect('user_id', [
-                    'selected' => Form::restorePostValue('user_id', $data['user_id'], false),
+                    'selected' => Form::post('user_id', $data['user_id']),
                     'class' => 'inputmedium'
                 ]) ?></td>
         </tr>
         <tr>
             <td><?= _lang('userroles.edit.borrow') ?></td>
             <td><?= Admin::userSelect('group_id', [
-                    'selected' => Form::restorePostValue('group_id', $data['group_id'], false),
+                    'selected' => Form::post('group_id', $data['group_id']),
                     'group_cond' => 'level<' . User::getLevel(), 'select_groups' => true,
                     'class' => 'inputmedium'
                 ]) ?></td>
         </tr>
         <tr>
             <td><?= _lang('userroles.edit.since') ?></td>
-            <td><?= Form::editTime('since', (int)Form::restorePostValue('since', $data['since'], false)) ?></td>
+            <td><?= Form::editTime('since', (int)Form::post('since', $data['since'])) ?></td>
         </tr>
         <tr>
             <td><?= _lang('userroles.edit.until') ?></td>
             <td>
-                <?= Form::editTime('until', ($data['until'] != null ? (int)Form::restorePostValue('until', $data['until'], false) : null)) ?>
+                <?= Form::editTime('until', ($data['until'] != null ? (int)Form::post('until', $data['until']) : null)) ?>
                 <br><br>
                 <input type="button" id="unlimited" name="unlimited" value="<?= _lang('userroles.edit.unlimited') ?>">
                 <script lang="javascript">
